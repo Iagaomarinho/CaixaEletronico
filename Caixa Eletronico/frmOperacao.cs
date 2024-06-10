@@ -104,7 +104,6 @@ namespace Caixa_Eletronico
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            InitializeComponent();
             s = Singleton.Instance;
             this.operacao = operacao;
             if (this.operacao == 't')

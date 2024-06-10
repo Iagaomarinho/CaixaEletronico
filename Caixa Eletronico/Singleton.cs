@@ -33,8 +33,8 @@ namespace Caixa_Eletronico
         public Conta BuscarConta(string numero)
         {
             Conta c = contas.Find(c => c.Numero == numero);
-
             return c;
-        } 
+        }
+
     }
 }

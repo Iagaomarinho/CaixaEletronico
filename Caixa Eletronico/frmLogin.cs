@@ -33,7 +33,7 @@ namespace Caixa_Eletronico
         private void btAcessar_Click(object sender, EventArgs e)
         {
             Conta c = s.BuscarConta(txtLogin.Text);
-            if(c != null)
+            if (c != null)
             {
                 //logado
                 s.logada = c;
@@ -51,6 +51,13 @@ namespace Caixa_Eletronico
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmLogin frm = new frmLogin();
+            frm.Show();
+            this.Hide();
         }
     }
 }

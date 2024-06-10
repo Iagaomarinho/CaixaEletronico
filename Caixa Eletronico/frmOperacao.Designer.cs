@@ -32,8 +32,9 @@
             lblValor = new Label();
             numValor = new NumericUpDown();
             btRealizar = new Button();
-            conta = new TextBox();
-            label1 = new Label();
+            num_conta = new TextBox();
+            lblConta = new Label();
+            btVoltar = new Button();
             ((System.ComponentModel.ISupportInitialize)numValor).BeginInit();
             SuspendLayout();
             // 
@@ -43,9 +44,8 @@
             lblOperacao.Font = new Font("Segoe UI", 18F);
             lblOperacao.Location = new Point(296, 43);
             lblOperacao.Name = "lblOperacao";
-            lblOperacao.Size = new Size(204, 32);
+            lblOperacao.Size = new Size(0, 32);
             lblOperacao.TabIndex = 0;
-            lblOperacao.Text = "Tipo de Operação";
             lblOperacao.Click += lblOperacao_Click;
             // 
             // lblValor
@@ -78,34 +78,45 @@
             btRealizar.UseVisualStyleBackColor = true;
             btRealizar.Click += btRealizar_Click;
             // 
-            // conta
+            // num_conta
             // 
-            conta.Location = new Point(307, 150);
-            conta.Name = "conta";
-            conta.Size = new Size(181, 23);
-            conta.TabIndex = 4;
-            conta.Visible = false;
-            conta.TextChanged += textBox1_TextChanged;
+            num_conta.Location = new Point(307, 150);
+            num_conta.Name = "num_conta";
+            num_conta.Size = new Size(181, 23);
+            num_conta.TabIndex = 4;
+            num_conta.Visible = false;
+            num_conta.TextChanged += textBox1_TextChanged;
             // 
-            // label1
+            // lblConta
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F);
-            label1.Location = new Point(65, 145);
-            label1.Name = "label1";
-            label1.Size = new Size(236, 25);
-            label1.TabIndex = 5;
-            label1.Text = "Conta que deseja tranferir:";
-            label1.Visible = false;
-            label1.Click += label1_Click;
+            lblConta.AutoSize = true;
+            lblConta.Font = new Font("Segoe UI", 14F);
+            lblConta.Location = new Point(65, 145);
+            lblConta.Name = "lblConta";
+            lblConta.Size = new Size(236, 25);
+            lblConta.TabIndex = 5;
+            lblConta.Text = "Conta que deseja tranferir:";
+            lblConta.Visible = false;
+            lblConta.Click += label1_Click;
+            // 
+            // btVoltar
+            // 
+            btVoltar.Location = new Point(53, 36);
+            btVoltar.Name = "btVoltar";
+            btVoltar.Size = new Size(101, 39);
+            btVoltar.TabIndex = 6;
+            btVoltar.Text = "Voltar";
+            btVoltar.UseVisualStyleBackColor = true;
+            btVoltar.Click += button1_Click;
             // 
             // frmOperacao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
-            Controls.Add(conta);
+            Controls.Add(btVoltar);
+            Controls.Add(lblConta);
+            Controls.Add(num_conta);
             Controls.Add(btRealizar);
             Controls.Add(numValor);
             Controls.Add(lblValor);
@@ -124,7 +135,8 @@
         private Label lblValor;
         private NumericUpDown numValor;
         private Button btRealizar;
-        private TextBox conta;
-        private Label label1;
+        private TextBox num_conta;
+        private Label lblConta;
+        private Button btVoltar;
     }
 }

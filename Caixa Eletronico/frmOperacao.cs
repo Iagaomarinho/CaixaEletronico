@@ -16,29 +16,15 @@ namespace Caixa_Eletronico
     {
         char operacao;
         Singleton s;
-        Conta c;
-        public frmOperacao(Conta c, char operacao)
+
+        public frmOperacao(char tipo) : this()
+        {
+            this.operacao = tipo;
+        }
+        public frmOperacao()
         {
             InitializeComponent();
             s = Singleton.Instance;
-            this.operacao = operacao;
-            this.c = c;    
-            switch (this.operacao)
-            {
-                case 's':
-                    lblOperacao.Text = "Sacar";
-                    break;
-                case 'd':
-                    lblOperacao.Text = "Depositar";
-                    break;
-                case 't':
-                    lblOperacao.Text = "Transferir";
-                    break;
-                case 'e':
-                    lblOperacao.Text = "Ver extrato";
-                    break;
-
-            }
         }
 
         private void btRealizar_Click(object sender, EventArgs e)
@@ -50,25 +36,64 @@ namespace Caixa_Eletronico
                     s.logada.Sacar(valor);
                     break;
                 case 'd':
-                    s.logada.Depositar(valor);
+                    if (s.logada.Depositar(valor))
+                    {
+                        MessageBox.Show("deu certo");
+                    }
                     break;
                 case 't':
-                    s.logada.Transferir(c, valor);
+                    Conta destino = s.BuscarConta(num_conta.Text);
+                    if (destino != null)
+                    {
+                        if (s.logada.Transferir(destino, valor))
+                        {
+                            MessageBox.Show("deucerto");
+                        }
+                        else
+                        {
+                            MessageBox.Show("vtnc seu viadinho");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("deu errado");
+                    }
                     break;
                 case 'e':
-                    ;
+                    Extrato frm2 = new Extrato();
+                    frm2.Show();
+                    this.Hide();
                     break;
             }
+            frmTelaPrincipal frm = new frmTelaPrincipal();
+            frm.Show();
+            this.Hide();
         }
 
         private void frmOperacao_Load(object sender, EventArgs e)
         {
-
+            switch (this.operacao)
+            {
+                case 's':
+                    lblOperacao.Text = "Sacar";
+                    break;
+                case 'd':
+                    lblOperacao.Text = "Depositar";
+                    break;
+                case 't':
+                    lblOperacao.Text = "Transferir";
+                    num_conta.Visible = true;
+                    lblConta.Visible = true;
+                    break;
+                case 'e':
+                    lblOperacao.Text = "Ver extrato";
+                    break;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            if(this.operacao == 't')
+            if (this.operacao == 't')
             {
                 Visible = true;
             }
@@ -93,6 +118,15 @@ namespace Caixa_Eletronico
         private void lblOperacao_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmTelaPrincipal frm = new frmTelaPrincipal();
+            frm.Show();
+            this.Hide();
+
+            
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Caixa_Eletronico
+﻿        namespace Caixa_Eletronico
 {
     partial class frmTelaPrincipal
     {

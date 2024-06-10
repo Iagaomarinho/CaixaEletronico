@@ -38,7 +38,7 @@ namespace Caixa_Eletronico
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmOperacao frm = new frmOperacao('e');
+            Extrato frm = new Extrato();
             frm.Show();
             this.Hide();
         }

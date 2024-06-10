@@ -31,6 +31,7 @@
             btVoltar = new Button();
             lblSaldo = new Label();
             panel1 = new Panel();
+            lblS = new Label();
             btVerExtrat = new Button();
             btTransf = new Button();
             btDeposita = new Button();
@@ -61,6 +62,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(lblS);
             panel1.Controls.Add(btVerExtrat);
             panel1.Controls.Add(btTransf);
             panel1.Controls.Add(btDeposita);
@@ -71,6 +73,15 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(708, 369);
             panel1.TabIndex = 2;
+            panel1.Paint += panel1_Paint;
+            // 
+            // lblS
+            // 
+            lblS.AutoSize = true;
+            lblS.Location = new Point(571, 31);
+            lblS.Name = "lblS";
+            lblS.Size = new Size(0, 15);
+            lblS.TabIndex = 6;
             // 
             // btVerExtrat
             // 
@@ -124,6 +135,7 @@
             Controls.Add(panel1);
             Name = "frmTelaPrincipal";
             Text = "frmTelaPrincipal";
+            Load += frmTelaPrincipal_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -138,5 +150,6 @@
         private Button btTransf;
         private Button btDeposita;
         private Button btSacar;
+        private Label lblS;
     }
 }

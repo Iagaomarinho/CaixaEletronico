@@ -12,9 +12,11 @@ namespace Caixa_Eletronico
 {
     public partial class frmTelaPrincipal : Form
     {
+        Singleton s;
         public frmTelaPrincipal()
         {
             InitializeComponent();
+            s = Singleton.Instance;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,5 +59,14 @@ namespace Caixa_Eletronico
             this.Hide();
         }
 
+        private void frmTelaPrincipal_Load(object sender, EventArgs e)
+        {
+            lblS.Text = s.logada.Saldo.ToString();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

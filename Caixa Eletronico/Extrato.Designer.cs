@@ -29,23 +29,35 @@
         private void InitializeComponent()
         {
             DgvExtrato = new DataGridView();
+            btVoltar = new Button();
             ((System.ComponentModel.ISupportInitialize)DgvExtrato).BeginInit();
             SuspendLayout();
             // 
             // DgvExtrato
             // 
             DgvExtrato.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DgvExtrato.Location = new Point(80, 12);
+            DgvExtrato.Location = new Point(203, 29);
             DgvExtrato.Name = "DgvExtrato";
-            DgvExtrato.Size = new Size(603, 322);
+            DgvExtrato.Size = new Size(549, 300);
             DgvExtrato.TabIndex = 0;
             DgvExtrato.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // btVoltar
+            // 
+            btVoltar.Location = new Point(42, 51);
+            btVoltar.Name = "btVoltar";
+            btVoltar.Size = new Size(114, 56);
+            btVoltar.TabIndex = 1;
+            btVoltar.Text = "Voltar";
+            btVoltar.UseVisualStyleBackColor = true;
+            btVoltar.Click += button1_Click;
             // 
             // Extrato
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btVoltar);
             Controls.Add(DgvExtrato);
             Name = "Extrato";
             Text = "Extrato";
@@ -57,5 +69,6 @@
         #endregion
 
         private DataGridView DgvExtrato;
+        private Button btVoltar;
     }
 }

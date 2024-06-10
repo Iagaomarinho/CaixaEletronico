@@ -28,8 +28,15 @@ namespace Caixa_Eletronico
         {
             var source = new BindingSource();
             source.DataSource = s.logada.Transacoes;
-            DgvExtrato.DataSource = source; 
+            DgvExtrato.DataSource = source;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmTelaPrincipal frm = new frmTelaPrincipal();
+            frm.Show();
+            this.Hide();
         }
     }
 }

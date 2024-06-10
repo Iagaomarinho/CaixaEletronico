@@ -34,11 +34,14 @@ namespace Caixa_Eletronico
             {
                 case 's':
                     s.logada.Sacar(valor);
+                    if(s.logada.Sacar(valor)){
+                        MessageBox.Show("Saque Realizado");
+                    }
                     break;
                 case 'd':
                     if (s.logada.Depositar(valor))
                     {
-                        MessageBox.Show("deu certo");
+                        MessageBox.Show("Depósito Realizado");
                     }
                     break;
                 case 't':
@@ -47,16 +50,16 @@ namespace Caixa_Eletronico
                     {
                         if (s.logada.Transferir(destino, valor))
                         {
-                            MessageBox.Show("deucerto");
+                            MessageBox.Show("Tranferência Realizada");
                         }
                         else
                         {
-                            MessageBox.Show("vtnc seu viadinho");
+                            MessageBox.Show("Algo deu errado, Tente Novamente");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("deu errado");
+                        MessageBox.Show("Conta não encontrada");
                     }
                     break;
                 case 'e':

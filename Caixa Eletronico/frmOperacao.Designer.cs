@@ -101,6 +101,7 @@
             // 
             // btVoltar
             // 
+            btVoltar.Font = new Font("Segoe UI", 15F);
             btVoltar.Location = new Point(53, 36);
             btVoltar.Name = "btVoltar";
             btVoltar.Size = new Size(101, 39);

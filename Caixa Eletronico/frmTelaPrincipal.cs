@@ -28,7 +28,7 @@ namespace Caixa_Eletronico
 
         private void lblSaldo_Click(object sender, EventArgs e)
         {
-
+            Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)

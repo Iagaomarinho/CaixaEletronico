@@ -36,17 +36,18 @@
             // DgvExtrato
             // 
             DgvExtrato.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DgvExtrato.Location = new Point(203, 29);
+            DgvExtrato.Location = new Point(146, 12);
             DgvExtrato.Name = "DgvExtrato";
-            DgvExtrato.Size = new Size(549, 300);
+            DgvExtrato.Size = new Size(642, 426);
             DgvExtrato.TabIndex = 0;
             DgvExtrato.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btVoltar
             // 
-            btVoltar.Location = new Point(42, 51);
+            btVoltar.Font = new Font("Segoe UI", 15F);
+            btVoltar.Location = new Point(12, 12);
             btVoltar.Name = "btVoltar";
-            btVoltar.Size = new Size(114, 56);
+            btVoltar.Size = new Size(114, 57);
             btVoltar.TabIndex = 1;
             btVoltar.Text = "Voltar";
             btVoltar.UseVisualStyleBackColor = true;

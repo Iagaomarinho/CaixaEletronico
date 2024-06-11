@@ -58,7 +58,7 @@
             lblSaldo.BackColor = SystemColors.ButtonFace;
             lblSaldo.Font = new Font("Arial", 18F);
             lblSaldo.ForeColor = SystemColors.ActiveCaptionText;
-            lblSaldo.Location = new Point(507, 41);
+            lblSaldo.Location = new Point(511, 41);
             lblSaldo.Name = "lblSaldo";
             lblSaldo.Size = new Size(88, 27);
             lblSaldo.TabIndex = 1;
@@ -84,10 +84,11 @@
             // 
             lblS.AutoSize = true;
             lblS.Font = new Font("Segoe UI", 18F);
-            lblS.Location = new Point(584, 36);
+            lblS.Location = new Point(588, 36);
             lblS.Name = "lblS";
             lblS.Size = new Size(0, 32);
             lblS.TabIndex = 6;
+            lblS.Click += lblS_Click;
             // 
             // btVerExtrat
             // 

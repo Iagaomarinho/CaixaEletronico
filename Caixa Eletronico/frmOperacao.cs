@@ -33,7 +33,6 @@ namespace Caixa_Eletronico
             switch (this.operacao)
             {
                 case 's':
-                    s.logada.Sacar(valor);
                     if(s.logada.Sacar(valor)){
                         MessageBox.Show("Saque Realizado");
                     }

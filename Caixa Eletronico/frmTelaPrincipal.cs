@@ -61,10 +61,15 @@ namespace Caixa_Eletronico
 
         private void frmTelaPrincipal_Load(object sender, EventArgs e)
         {
-            lblS.Text = s.logada.Saldo.ToString();
+            lblS.Text = s.logada.Saldo.ToString("C2", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"));
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblS_Click(object sender, EventArgs e)
         {
 
         }
